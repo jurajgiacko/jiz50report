@@ -16,6 +16,7 @@ let currentSlide = 0;
 let totalSlides = 0;
 let currentLang = CONFIG.defaultLang;
 let elements = {};
+let mobileHintDismissed = false;
 
 // ========================================
 // INITIALIZATION
@@ -91,7 +92,53 @@ function showMainContent() {
         });
         
         initPresentation();
+        checkMobileHint();
     }, 400);
+}
+
+// ========================================
+// MOBILE HINT
+// ========================================
+function checkMobileHint() {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const hintShown = sessionStorage.getItem('mobile_hint_shown');
+    
+    if (isMobile && isPortrait && !hintShown && !mobileHintDismissed) {
+        showMobileHint();
+    }
+}
+
+function showMobileHint() {
+    const hint = document.getElementById('mobile-hint');
+    const fullscreenBtn = document.getElementById('hint-fullscreen-btn');
+    const dismissBtn = document.getElementById('hint-dismiss');
+    
+    if (!hint) return;
+    
+    hint.classList.add('show', 'force-show');
+    
+    fullscreenBtn.addEventListener('click', () => {
+        hideMobileHint();
+        toggleFullscreen();
+        // Lock to landscape if supported
+        if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+        }
+    });
+    
+    dismissBtn.addEventListener('click', () => {
+        hideMobileHint();
+    });
+}
+
+function hideMobileHint() {
+    const hint = document.getElementById('mobile-hint');
+    if (hint) {
+        hint.classList.remove('show', 'force-show');
+        mobileHintDismissed = true;
+        sessionStorage.setItem('mobile_hint_shown', 'true');
+    }
 }
 
 // ========================================

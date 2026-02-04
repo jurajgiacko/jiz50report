@@ -1678,6 +1678,359 @@ body.fullscreen:hover .fullscreen-btn {
 }
 
 /* ========================================
+   MOBILE HINT OVERLAY
+   ======================================== */
+.mobile-hint {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-hint.show {
+    display: flex;
+}
+
+.mobile-hint-content {
+    text-align: center;
+    color: white;
+    padding: 40px 30px;
+    max-width: 320px;
+}
+
+.hint-icon {
+    width: 48px;
+    height: 48px;
+    stroke: white;
+    margin: 0 8px;
+}
+
+.hint-icon.rotated {
+    transform: rotate(-90deg);
+}
+
+.hint-arrow {
+    width: 32px;
+    height: 32px;
+    stroke: var(--enervit-red);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(5px); }
+}
+
+.mobile-hint-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 24px 0;
+    opacity: 0.9;
+}
+
+.hint-fullscreen-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--enervit-red);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hint-fullscreen-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.hint-fullscreen-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+}
+
+.hint-dismiss {
+    display: block;
+    margin: 20px auto 0;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hint-dismiss:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+/* ========================================
+   MOBILE LANDSCAPE OPTIMIZATIONS
+   ======================================== */
+@media (max-width: 932px) and (orientation: landscape) {
+    .nav {
+        padding: 8px 16px;
+    }
+    
+    .nav-logo-img {
+        height: 20px;
+    }
+    
+    .nav-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .slide-content {
+        padding: 60px 40px 30px;
+    }
+    
+    .section-badge {
+        padding: 4px 12px;
+        font-size: 10px;
+    }
+    
+    .badge-num {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    
+    .slide h2 {
+        font-size: 22px !important;
+        margin-bottom: 12px;
+    }
+    
+    .highlight-box {
+        padding: 16px 20px;
+    }
+    
+    .highlight-text {
+        font-size: 14px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
+    
+    .stat-name, .stat-desc {
+        font-size: 10px;
+    }
+    
+    /* Title slide landscape */
+    .title-slide .slide-content {
+        padding: 50px 40px 20px;
+    }
+    
+    .title-logos {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .title-logo-img, .title-logo-jiz {
+        height: 36px !important;
+    }
+    
+    .title-x {
+        font-size: 20px;
+    }
+    
+    .title-badge {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+    
+    .title-stats {
+        margin-top: 16px;
+    }
+    
+    .stat-num {
+        font-size: 28px;
+    }
+    
+    /* Split layout landscape */
+    .split-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    
+    .split-photo {
+        max-height: 50vh;
+    }
+    
+    .feature-list li {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+    
+    /* Event grid landscape */
+    .event-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+    .event-card {
+        padding: 12px;
+    }
+    
+    .event-icon {
+        font-size: 20px;
+    }
+    
+    .event-value {
+        font-size: 18px;
+    }
+    
+    .event-label {
+        font-size: 10px;
+    }
+    
+    /* Fullimage slides landscape */
+    .fullimage-title {
+        font-size: 32px !important;
+    }
+    
+    .fullimage-title.fueled {
+        font-size: 42px !important;
+    }
+    
+    .fullimage-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Team slide landscape */
+    .team-photo-wrapper {
+        max-width: 50%;
+    }
+    
+    .team-photo {
+        max-height: 45vh;
+    }
+    
+    .team-text {
+        font-size: 14px;
+    }
+    
+    /* Gallery landscape */
+    .gallery-mosaic {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-height: 55vh;
+    }
+    
+    /* Reach landscape */
+    .big-num {
+        font-size: 48px;
+    }
+    
+    .big-label {
+        font-size: 14px;
+    }
+    
+    .reach-row {
+        gap: 30px;
+    }
+    
+    .reach-num {
+        font-size: 24px;
+    }
+    
+    .reach-label {
+        font-size: 10px;
+    }
+    
+    /* ROI landscape */
+    .roi-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+    
+    .roi-card {
+        padding: 14px;
+    }
+    
+    .roi-icon {
+        font-size: 24px;
+    }
+    
+    .roi-card h3 {
+        font-size: 13px;
+    }
+    
+    .roi-card p {
+        font-size: 11px;
+    }
+    
+    /* Future landscape */
+    .future-num {
+        font-size: 56px;
+    }
+    
+    .future-days {
+        font-size: 28px;
+    }
+    
+    .future-logos img {
+        height: 24px !important;
+    }
+    
+    /* Paralympic landscape */
+    .paralympic-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    
+    .paralympic-photo {
+        max-height: 45vh;
+    }
+    
+    .partnership-logo {
+        max-height: 45vh;
+    }
+    
+    /* Track slide landscape */
+    .track-image img {
+        max-height: 50vh;
+    }
+    
+    /* Footer landscape */
+    .footer {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+    
+    /* Fullscreen button landscape */
+    .fullscreen-btn {
+        top: 8px;
+        right: 8px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Hide mobile hint in landscape or after dismissed */
+@media (orientation: landscape) {
+    .mobile-hint:not(.force-show) {
+        display: none !important;
+    }
+}
+
+/* ========================================
    ANIMATIONS
    ======================================== */
 @keyframes shake {
