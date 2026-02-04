@@ -267,6 +267,51 @@ function initFullscreen() {
     
     document.addEventListener('fullscreenchange', updateFullscreenUI);
     document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
+    
+    // Show fullscreen hint on desktop
+    showFullscreenHint();
+}
+
+function showFullscreenHint() {
+    const hint = document.getElementById('fullscreen-hint');
+    const enableBtn = document.getElementById('hint-enable-fs');
+    const closeBtn = document.getElementById('hint-close');
+    
+    if (!hint || !enableBtn || !closeBtn) return;
+    
+    // Only show on desktop and if not shown before
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const hintDismissed = sessionStorage.getItem('fullscreen_hint_dismissed');
+    
+    if (isMobile || hintDismissed) return;
+    
+    // Update text based on language
+    hint.querySelectorAll('[data-cs]').forEach(el => {
+        el.textContent = el.dataset[currentLang] || el.dataset.cs;
+    });
+    
+    // Show hint after a short delay
+    setTimeout(() => {
+        hint.classList.add('show');
+    }, 1500);
+    
+    // Enable fullscreen button
+    enableBtn.addEventListener('click', () => {
+        hint.classList.remove('show');
+        sessionStorage.setItem('fullscreen_hint_dismissed', 'true');
+        toggleFullscreen();
+    });
+    
+    // Close button
+    closeBtn.addEventListener('click', () => {
+        hint.classList.remove('show');
+        sessionStorage.setItem('fullscreen_hint_dismissed', 'true');
+    });
+    
+    // Auto-hide after 10 seconds
+    setTimeout(() => {
+        hint.classList.remove('show');
+    }, 12000);
 }
 
 function toggleFullscreen() {

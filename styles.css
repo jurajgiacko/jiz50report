@@ -60,6 +60,90 @@ body {
     transform: scale(1.05);
 }
 
+/* Fullscreen Hint */
+.fullscreen-hint {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    z-index: 250;
+    align-items: center;
+    gap: 16px;
+    animation: slideIn 0.4s ease;
+}
+
+.fullscreen-hint.show {
+    display: flex;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fullscreen-hint span {
+    font-size: 14px;
+    color: var(--enervit-black);
+    max-width: 220px;
+}
+
+.hint-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--enervit-red);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.hint-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+.hint-btn:hover {
+    background: var(--enervit-red-dark);
+    transform: scale(1.02);
+}
+
+.hint-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--enervit-gray-400);
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+}
+
+.hint-close:hover {
+    color: var(--enervit-black);
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .fullscreen-hint {
+        display: none !important;
+    }
+}
+
 .fullscreen-btn svg {
     width: 20px;
     height: 20px;

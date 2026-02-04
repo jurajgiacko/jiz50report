@@ -31,6 +31,18 @@
 
     <!-- Main Presentation -->
     <div id="main-content" class="main-content hidden">
+        <!-- Fullscreen Hint -->
+        <div class="fullscreen-hint" id="fullscreen-hint">
+            <span data-cs="Pro nejlepší zážitek doporučujeme režim celé obrazovky" data-en="For the best experience, we recommend fullscreen mode">Pro nejlepší zážitek doporučujeme režim celé obrazovky</span>
+            <button class="hint-btn" id="hint-enable-fs">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+                <span data-cs="Zapnout" data-en="Enable">Zapnout</span>
+            </button>
+            <button class="hint-close" id="hint-close">✕</button>
+        </div>
+
         <!-- Fullscreen Button -->
         <button class="fullscreen-btn" id="fullscreen-btn" title="Fullscreen">
             <svg class="icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
