@@ -44,6 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // PIN AUTHENTICATION
 // ========================================
 function initPinAuth() {
+    // Init language from storage
+    const savedLang = localStorage.getItem('enervit_lang');
+    if (savedLang) {
+        currentLang = savedLang;
+    }
+    
+    // Init PIN language switcher
+    initPinLanguage();
+    
     if (sessionStorage.getItem('enervit_authenticated') === 'true') {
         showMainContent();
         return;
@@ -57,6 +66,43 @@ function initPinAuth() {
         elements.pinError.textContent = '';
     });
     elements.pinInput.focus();
+}
+
+function initPinLanguage() {
+    const csBtn = document.getElementById('pin-lang-cs');
+    const enBtn = document.getElementById('pin-lang-en');
+    
+    if (!csBtn || !enBtn) return;
+    
+    // Set initial state
+    updatePinLanguageUI();
+    
+    csBtn.addEventListener('click', () => {
+        currentLang = 'cs';
+        localStorage.setItem('enervit_lang', 'cs');
+        updatePinLanguageUI();
+    });
+    
+    enBtn.addEventListener('click', () => {
+        currentLang = 'en';
+        localStorage.setItem('enervit_lang', 'en');
+        updatePinLanguageUI();
+    });
+}
+
+function updatePinLanguageUI() {
+    const csBtn = document.getElementById('pin-lang-cs');
+    const enBtn = document.getElementById('pin-lang-en');
+    
+    if (csBtn && enBtn) {
+        csBtn.classList.toggle('active', currentLang === 'cs');
+        enBtn.classList.toggle('active', currentLang === 'en');
+    }
+    
+    // Update PIN screen texts
+    document.querySelectorAll('#pin-screen [data-cs]').forEach(el => {
+        el.textContent = el.dataset[currentLang] || el.dataset.cs;
+    });
 }
 
 function validatePin() {

@@ -14,6 +14,10 @@
 <body>
     <!-- PIN Lock Screen -->
     <div id="pin-screen" class="pin-screen">
+        <div class="pin-lang-switcher">
+            <button id="pin-lang-cs" class="pin-lang-btn active">CZ</button>
+            <button id="pin-lang-en" class="pin-lang-btn">EN</button>
+        </div>
         <div class="pin-container">
             <div class="pin-logo">
                 <img src="assets/enervit-logo.svg" alt="Enervit" class="pin-logo-enervit">
@@ -23,7 +27,7 @@
             <div class="pin-badge">PARTNER REPORT 2026</div>
             <div class="pin-input-group">
                 <input type="password" id="pin-input" class="pin-input" placeholder="PIN" maxlength="6">
-                <button id="pin-submit" class="pin-submit">Vstoupit</button>
+                <button id="pin-submit" class="pin-submit" data-cs="Vstoupit" data-en="Enter">Vstoupit</button>
             </div>
             <p id="pin-error" class="pin-error"></p>
         </div>
