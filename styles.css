@@ -1441,118 +1441,156 @@ body.fullscreen:hover .fullscreen-btn {
     
     /* Highlight */
     .highlight-box {
-        padding: 20px;
+        padding: 14px 16px;
     }
     
     .highlight-text {
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 1.4;
     }
     
-    /* Stats */
+    /* Stats - 02 Executive Summary */
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
     }
     
     .stat-card {
-        padding: 20px;
+        padding: 12px 8px;
     }
     
     .stat-value {
-        font-size: 32px;
+        font-size: 22px;
     }
     
     .stat-name {
-        font-size: 12px;
+        font-size: 10px;
     }
     
-    /* Cards */
+    .stat-desc {
+        display: none;
+    }
+    
+    /* Cards - 03 O Události */
     .cards-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
     
     .event-card {
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        text-align: left;
+        padding: 12px;
+        display: block;
+        text-align: center;
     }
     
     .event-icon {
-        font-size: 28px;
-        margin-bottom: 0;
-    }
-    
-    .event-card h3 {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 4px;
     }
     
-    .event-card p {
+    .event-card h3 {
         font-size: 13px;
+        margin-bottom: 2px;
     }
     
-    /* Quote */
+    .event-card p {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+    
+    /* Quote - hide on mobile */
     .quote-box {
-        padding: 20px;
+        display: none;
     }
     
-    .quote-box blockquote {
-        font-size: 15px;
-    }
-    
-    /* Photos */
+    /* Photos - 2x2 grid */
     .photo-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
     
     .photo-card {
-        height: 160px;
+        height: 120px;
     }
     
-    /* Split */
+    .photo-tag {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+    
+    .photo-overlay p {
+        font-size: 10px;
+    }
+    
+    /* Split - side by side on mobile */
+    .split-layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
     .split-image {
-        height: 200px;
+        height: auto;
     }
     
+    .split-image img {
+        max-height: 45vh;
+        object-fit: contain;
+    }
+    
+    .split-content h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .feature-list li {
+        padding: 8px 0;
+        font-size: 12px;
+    }
+    
+    /* Track image */
+    .track-subtitle {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .track-image img {
+        max-height: 50vh;
+    }
+    
+    /* Paralympic - side by side */
     .paralympic-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
     
     .paralympic-info {
-        grid-column: span 1;
+        grid-column: span 2;
+        padding: 0;
     }
     
     .paralympic-photo {
         height: auto;
-        max-height: 140px;
+        max-height: 120px;
         object-fit: contain;
     }
     
     .partnership-logo {
-        max-height: 140px;
+        max-height: 120px;
         object-fit: contain;
     }
     
     .cpv-logo {
-        height: 40px;
+        height: 32px;
     }
     
     .paralympic-badge {
-        padding: 10px 16px;
-        font-size: 14px;
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-top: 8px;
     }
     
-    .split-content h2 {
-        font-size: 24px;
-    }
-    
-    .feature-list li {
-        padding: 12px 0;
-        font-size: 14px;
+    .paralympic-badge .badge-icon {
+        font-size: 16px;
     }
     
     /* Gallery */
