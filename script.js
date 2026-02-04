@@ -7,8 +7,8 @@ const CONFIG = {
     PIN: '2026',
     defaultLang: 'cs',
     slideTitles: {
-        cs: ['Úvod', 'Executive Summary', 'O Události', 'Brand Aktivace', 'Promo Zóna', 'Na trati', 'Paralympijský tým', 'Náš tým', 'Galerie', 'Reach & Impact', 'Hodnota', 'Výhled 2027'],
-        en: ['Intro', 'Executive Summary', 'About Event', 'Brand Activations', 'Promo Zone', 'On Track', 'Paralympic Team', 'Our Team', 'Gallery', 'Reach & Impact', 'Value', 'Outlook 2027']
+        cs: ['Úvod', 'Executive Summary', 'O Události', 'Brand Aktivace', 'Intersport OC Nisa', 'Promo Zóna', 'Na trati', 'Paralympijský tým', 'Náš tým', 'Galerie', 'Reach & Impact', 'Hodnota', 'Výhled 2027'],
+        en: ['Intro', 'Executive Summary', 'About Event', 'Brand Activations', 'Intersport OC Nisa', 'Promo Zone', 'On Track', 'Paralympic Team', 'Our Team', 'Gallery', 'Reach & Impact', 'Value', 'Outlook 2027']
     }
 };
 
