@@ -111,24 +111,30 @@ function checkMobileHint() {
 
 function showMobileHint() {
     const hint = document.getElementById('mobile-hint');
-    const fullscreenBtn = document.getElementById('hint-fullscreen-btn');
-    const dismissBtn = document.getElementById('hint-dismiss');
+    const continueBtn = document.getElementById('hint-continue-btn');
+    const hintText = document.getElementById('hint-text');
     
     if (!hint) return;
     
+    // Update text based on current language
+    if (hintText) {
+        hintText.textContent = hintText.dataset[currentLang] || hintText.dataset.cs;
+    }
+    if (continueBtn) {
+        const span = continueBtn.querySelector('span');
+        if (span) {
+            span.textContent = span.dataset[currentLang] || span.dataset.cs;
+        }
+    }
+    
     hint.classList.add('show', 'force-show');
     
-    fullscreenBtn.addEventListener('click', () => {
+    continueBtn.addEventListener('click', () => {
         hideMobileHint();
-        toggleFullscreen();
         // Lock to landscape if supported
         if (screen.orientation && screen.orientation.lock) {
             screen.orientation.lock('landscape').catch(() => {});
         }
-    });
-    
-    dismissBtn.addEventListener('click', () => {
-        hideMobileHint();
     });
 }
 

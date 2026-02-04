@@ -1731,14 +1731,22 @@ body.fullscreen:hover .fullscreen-btn {
     opacity: 0.9;
 }
 
-.hint-fullscreen-btn {
+.hint-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.hint-continue-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     background: var(--enervit-red);
     color: white;
     border: none;
-    padding: 14px 28px;
+    padding: 14px 36px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 600;
@@ -1746,29 +1754,9 @@ body.fullscreen:hover .fullscreen-btn {
     transition: all 0.3s;
 }
 
-.hint-fullscreen-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.hint-fullscreen-btn:hover {
+.hint-continue-btn:hover {
     background: #b91c1c;
     transform: scale(1.05);
-}
-
-.hint-dismiss {
-    display: block;
-    margin: 20px auto 0;
-    background: transparent;
-    border: none;
-    color: rgba(255,255,255,0.5);
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.hint-dismiss:hover {
-    color: rgba(255,255,255,0.8);
 }
 
 /* ========================================
