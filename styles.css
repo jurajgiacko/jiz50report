@@ -4,8 +4,8 @@
    ======================================== */
 
 :root {
-    --enervit-red: #dc2626;
-    --enervit-red-dark: #b91c1c;
+    --enervit-red: #E20514;
+    --enervit-red-dark: #b80410;
     --enervit-red-light: #fef2f2;
     --enervit-black: #111827;
     --enervit-gray-900: #1f2937;
@@ -133,7 +133,7 @@ body.fullscreen:hover .fullscreen-btn {
 
 .pin-logo-enervit {
     height: 50px;
-    filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(3000%) hue-rotate(350deg) brightness(90%);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(6000%) hue-rotate(355deg) brightness(95%);
 }
 
 .pin-logo-jiz {
@@ -472,7 +472,7 @@ body.fullscreen:hover .fullscreen-btn {
 
 .title-logo-img {
     height: 50px;
-    filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(3000%) hue-rotate(350deg) brightness(90%);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(6000%) hue-rotate(355deg) brightness(95%);
 }
 
 .title-logo-jiz {
@@ -1116,7 +1116,7 @@ body.fullscreen:hover .fullscreen-btn {
 
 .future-logo-enervit {
     height: 44px;
-    filter: brightness(0) saturate(100%) invert(21%) sepia(100%) saturate(3000%) hue-rotate(350deg) brightness(90%);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(95%) saturate(6000%) hue-rotate(355deg) brightness(95%);
 }
 
 .future-logo-jiz50 {
