@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50">
+  <!-- Paralympijský Tým Logo -->
+  <!-- Agitos Symbol -->
+  <g transform="translate(5, 8)">
+    <path d="M10 18 C10 8 20 4 28 8 C24 13 20 17 16 19 C13 20 10 19 10 18" fill="#D7141A"/>
+    <path d="M18 28 C28 24 36 26 38 34 C32 33 26 31 22 29 C19 28 18 27 18 28" fill="#11457E"/>
+    <path d="M5 30 C3 22 9 17 18 20 C15 24 11 28 8 30 C6 32 4 31 5 30" fill="#009739"/>
+  </g>
+  <!-- Text -->
+  <g fill="#11457E">
+    <path d="M50 12h8c3 0 5 2 5 4s-2 4-5 4h-5v8h-3zm3 2v6h5c1 0 2-1 2-3s-1-3-2-3z"/>
+    <path d="M66 12h3l7 16h-4l-1-3h-7l-1 3h-4zm1.5 4l-2.5 7h5z"/>
+    <path d="M78 12h8c3 0 5 2 5 4 0 2-1 3-3 4l4 8h-4l-3-7h-4v7h-3zm3 2v5h5c1 0 2-1 2-2.5s-1-2.5-2-2.5z"/>
+    <path d="M94 12h3l7 16h-4l-1-3h-7l-1 3h-4zm1.5 4l-2.5 7h5z"/>
+  </g>
+  <g fill="#11457E">
+    <path d="M50 30h14v2h-5v12h-3v-12h-6z"/>
+    <path d="M66 30h4l4 10 4-10h4l-6 14h-4z"/>
+    <path d="M84 30h4l3 9 3-9h3v14h-3v-10l-3 10h-2l-3-10v10h-3z"/>
+  </g>
+  <!-- Czech flag line -->
+  <rect x="50" y="46" width="40" height="2" fill="#D7141A"/>
+  <rect x="90" y="46" width="40" height="2" fill="#11457E"/>
+</svg>

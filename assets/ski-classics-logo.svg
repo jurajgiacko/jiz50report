@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60">
+  <!-- Ski Classics Logo -->
+  <g>
+    <!-- Background -->
+    <rect x="0" y="0" width="180" height="60" fill="#1C1C1C" rx="4"/>
+    <!-- SKI text -->
+    <text x="90" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C9A962" letter-spacing="6">SKI</text>
+    <!-- CLASSICS text -->
+    <text x="90" y="45" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#FFFFFF" letter-spacing="2">CLASSICS</text>
+    <!-- Gold line -->
+    <rect x="30" y="28" width="120" height="1" fill="#C9A962"/>
+  </g>
+</svg>

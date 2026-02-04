@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#dc2626">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Enervit × Jizerská 50 Partner Report 2026">
+    <title>Enervit × Jizerská 50 | Partner Report 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PIN Lock Screen -->
+    <div id="pin-screen" class="pin-screen">
+        <div class="pin-container">
+            <div class="pin-logo">
+                <img src="assets/enervit-logo.svg" alt="Enervit" class="pin-logo-enervit">
+                <span class="pin-logo-x">×</span>
+                <img src="assets/jizerska50-logo.svg" alt="Jizerská 50" class="pin-logo-jiz">
+            </div>
+            <div class="pin-badge">PARTNER REPORT 2026</div>
+            <div class="pin-input-group">
+                <input type="password" id="pin-input" class="pin-input" placeholder="PIN" maxlength="6">
+                <button id="pin-submit" class="pin-submit">Vstoupit</button>
+            </div>
+            <p id="pin-error" class="pin-error"></p>
+        </div>
+    </div>
+
+    <!-- Main Presentation -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Fullscreen Button -->
+        <button class="fullscreen-btn" id="fullscreen-btn" title="Fullscreen">
+            <svg class="icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+            <svg class="icon-compress" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+            </svg>
+        </button>
+
+        <!-- Navigation Bar -->
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="assets/enervit-logo.svg" alt="Enervit" class="nav-logo-img">
+            </div>
+            <div class="nav-dots" id="nav-dots"></div>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button id="lang-cs" class="lang-btn active">CZ</button>
+                    <button id="lang-en" class="lang-btn">EN</button>
+                </div>
+                <span class="nav-counter" id="nav-counter">1 / 9</span>
+            </div>
+        </nav>
+
+        <!-- Slides Container -->
+        <main class="main">
+            <div class="slides-container" id="slides-container">
+
+                <!-- Slide 1: Title -->
+                <section class="slide title-slide">
+                    <div class="slide-content">
+                        <div class="title-logos">
+                            <img src="assets/enervit-logo.svg" alt="Enervit" class="title-logo-img">
+                            <span class="title-x">×</span>
+                            <img src="assets/jizerska50-logo.svg" alt="Jizerská 50" class="title-logo-jiz">
+                        </div>
+                        <div class="title-badge">PARTNER REPORT 2026</div>
+                        <h1 data-cs="Více než závod" data-en="More Than a Race">Více než závod</h1>
+                        <p data-cs="Laboratoř v terénu, kde spojujeme špičkovou výživu s lidskou energií" data-en="A field laboratory connecting premium nutrition with human energy">Laboratoř v terénu, kde spojujeme špičkovou výživu s lidskou energií</p>
+                        <div class="title-stats">
+                            <div class="title-stat">
+                                <span class="stat-num">9 821</span>
+                                <span class="stat-label" data-cs="účastníků" data-en="participants">účastníků</span>
+                            </div>
+                            <div class="title-stat">
+                                <span class="stat-num">34</span>
+                                <span class="stat-label" data-cs="zemí" data-en="countries">zemí</span>
+                            </div>
+                            <div class="title-stat">
+                                <span class="stat-num">59.</span>
+                                <span class="stat-label" data-cs="ročník" data-en="edition">ročník</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 2: Executive Summary -->
+                <section class="slide">
+                    <div class="slide-content">
+                        <div class="section-badge">
+                            <span class="badge-num">01</span>
+                            <span>EXECUTIVE SUMMARY</span>
+                        </div>
+                        <h2 data-cs="Lovebrand v akci" data-en="Lovebrand in Action">Lovebrand v akci</h2>
+                        <div class="highlight-box">
+                            <p class="highlight-text" data-cs="Enervit není jen sponzor — jsme součástí DNA Jizerské 50. Naše produkty dodávají energii každému závodníkovi od startu po cíl." data-en="Enervit is not just a sponsor — we are part of Jizerská 50's DNA. Our products power every racer from start to finish.">Enervit není jen sponzor — jsme součástí DNA Jizerské 50. Naše produkty dodávají energii každému závodníkovi od startu po cíl.</p>
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-value">9 821</span>
+                                <span class="stat-name" data-cs="Účastníků" data-en="Participants">Účastníků</span>
+                                <span class="stat-desc" data-cs="Rekordní účast" data-en="Record attendance">Rekordní účast</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">34</span>
+                                <span class="stat-name" data-cs="Zemí" data-en="Countries">Zemí</span>
+                                <span class="stat-desc" data-cs="Mezinárodní dosah" data-en="International reach">Mezinárodní dosah</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">15</span>
+                                <span class="stat-name" data-cs="TV stanic" data-en="TV Stations">TV stanic</span>
+                                <span class="stat-desc" data-cs="Živé přenosy" data-en="Live broadcasts">Živé přenosy</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-value">4</span>
+                                <span class="stat-name" data-cs="Závodní dny" data-en="Race Days">Závodní dny</span>
+                                <span class="stat-desc" data-cs="Intenzivní expozice" data-en="Intensive exposure">Intenzivní expozice</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 3: O Události -->
+                <section class="slide slide-dark">
+                    <div class="slide-content">
+                        <div class="section-badge light">
+                            <span class="badge-num">02</span>
+                            <span data-cs="O UDÁLOSTI" data-en="ABOUT EVENT">O UDÁLOSTI</span>
+                        </div>
+                        <h2 data-cs="Stopa, co spojuje svět" data-en="The Track That Connects the World">Stopa, co spojuje svět</h2>
+                        <div class="cards-grid">
+                            <div class="event-card">
+                                <span class="event-icon">🎿</span>
+                                <h3 data-cs="9 závodů" data-en="9 Races">9 závodů</h3>
+                                <p>50km, 30km, 25km, 17km, 10km, Štafeta, Mini</p>
+                            </div>
+                            <div class="event-card">
+                                <span class="event-icon">📺</span>
+                                <h3 data-cs="TV přenosy" data-en="TV Broadcasts">TV přenosy</h3>
+                                <p>ČT sport + 14 zahraničních TV</p>
+                            </div>
+                            <div class="event-card">
+                                <span class="event-icon">⭐</span>
+                                <h3 data-cs="Osobnosti" data-en="Celebrities">Osobnosti</h3>
+                                <p>J. Koller, M. Fuksa, K. Neumannová</p>
+                            </div>
+                            <div class="event-card">
+                                <span class="event-icon">🎵</span>
+                                <h3>Energy Fest</h3>
+                                <p data-cs="10 000+ diváků" data-en="10,000+ spectators">10 000+ diváků</p>
+                            </div>
+                        </div>
+                        <div class="quote-box">
+                            <blockquote data-cs="„Rekordních 9 821 účastníků k nám opět přivezlo energii a nadšení, na které se nezapomíná."" data-en=""A record 9,821 participants brought us unforgettable energy and enthusiasm."">"Rekordních 9 821 účastníků k nám opět přivezlo energii a nadšení, na které se nezapomíná."</blockquote>
+                            <div class="quote-author">
+                                <img src="assets/raul-logo.svg" alt="RAUL" class="quote-logo">
+                                <span data-cs="Organizátor" data-en="Organizer">Organizátor</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 4: Aktivace 1 -->
+                <section class="slide">
+                    <div class="slide-content">
+                        <div class="section-badge">
+                            <span class="badge-num">03</span>
+                            <span data-cs="BRAND AKTIVACE" data-en="BRAND ACTIVATIONS">BRAND AKTIVACE</span>
+                        </div>
+                        <h2 data-cs="Enervit v terénu" data-en="Enervit in the Field">Enervit v terénu</h2>
+                        <div class="photo-grid">
+                            <div class="photo-card" style="background-image: url('assets/brana-start.jpg')">
+                                <div class="photo-overlay">
+                                    <span class="photo-tag">START/CÍL</span>
+                                    <p data-cs="100% viditelnost" data-en="100% visibility">100% viditelnost</p>
+                                </div>
+                            </div>
+                            <div class="photo-card" style="background-image: url('assets/photo-2.jpg')">
+                                <div class="photo-overlay">
+                                    <span class="photo-tag">HAPPY HOURS</span>
+                                    <p data-cs="Kolo štěstí" data-en="Prize wheel">Kolo štěstí</p>
+                                </div>
+                            </div>
+                            <div class="photo-card" style="background-image: url('assets/balicek.jpg')">
+                                <div class="photo-overlay">
+                                    <span class="photo-tag" data-cs="BALÍČKY" data-en="PACKAGES">BALÍČKY</span>
+                                    <p data-cs="Téměř vyprodáno" data-en="Almost sold out">Téměř vyprodáno</p>
+                                </div>
+                            </div>
+                            <div class="photo-card" style="background-image: url('assets/intersport-tym.jpg')">
+                                <div class="photo-overlay">
+                                    <span class="photo-tag">INTERSPORT</span>
+                                    <p data-cs="Prodejní tým @ registrace" data-en="Sales team @ registration">Prodejní tým @ registrace</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 5: Aktivace 2 -->
+                <section class="slide slide-dark">
+                    <div class="slide-content">
+                        <div class="section-badge light">
+                            <span class="badge-num">04</span>
+                            <span data-cs="PROMO ZÓNA" data-en="PROMO ZONE">PROMO ZÓNA</span>
+                        </div>
+                        <div class="split-layout">
+                            <div class="split-image">
+                                <img src="assets/promo-zona.jpg" alt="Enervit stánek">
+                            </div>
+                            <div class="split-content">
+                                <h2 data-cs="Zaparkuj a doplň energii" data-en="Park & Recharge">Zaparkuj a doplň energii</h2>
+                                <ul class="feature-list">
+                                    <li data-cs="Stojan na lyže u stánku" data-en="Ski rack at booth">Stojan na lyže u stánku</li>
+                                    <li data-cs="Kompletní produktové portfolio" data-en="Complete product portfolio">Kompletní produktové portfolio</li>
+                                    <li data-cs="Odborné poradenství" data-en="Expert advice">Odborné poradenství</li>
+                                    <li data-cs="Soutěž: Tipni čas vítěze" data-en="Contest: Guess winner's time">Soutěž: Tipni čas vítěze</li>
+                                    <li data-cs="Happy Hours: Vytoč si výhru" data-en="Happy Hours: Spin to win">Happy Hours: Vytoč si výhru</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 6: Paralympic Team -->
+                <section class="slide slide-paralympic">
+                    <div class="slide-content">
+                        <div class="section-badge">
+                            <span class="badge-num">05</span>
+                            <span data-cs="PARTNERSTVÍ" data-en="PARTNERSHIP">PARTNERSTVÍ</span>
+                        </div>
+                        <h2 data-cs="První video content pro značku" data-en="First Video Content for Brand">První video content pro značku</h2>
+                        <div class="paralympic-grid">
+                            <div class="paralympic-photo-box">
+                                <img src="assets/paralympic-team.jpg" alt="Paralympic Team" class="paralympic-photo">
+                            </div>
+                            <div class="paralympic-partner-box">
+                                <img src="assets/cpt-enervit-partnership.png" alt="Český Paralympijský Tým × Enervit" class="partnership-logo">
+                            </div>
+                            <div class="paralympic-info">
+                                <ul class="feature-list">
+                                    <li data-cs="Exkluzivní rozhovor s paralympioniky" data-en="Exclusive interview with paralympians">Exkluzivní rozhovor s paralympioniky</li>
+                                    <li data-cs="Tvorba video obsahu přímo na místě" data-en="Video content creation on-site">Tvorba video obsahu přímo na místě</li>
+                                    <li data-cs="Propojení hodnot sportu a výživy" data-en="Connecting sport and nutrition values">Propojení hodnot sportu a výživy</li>
+                                </ul>
+                                <div class="paralympic-badge">
+                                    <span class="badge-icon">🎬</span>
+                                    <span data-cs="Premiéra obsahu 2026" data-en="Content premiere 2026">Premiéra obsahu 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 7: Team Štafeta -->
+                <section class="slide slide-team">
+                    <div class="slide-content center">
+                        <div class="section-badge light">
+                            <span class="badge-num">06</span>
+                            <span data-cs="NÁŠ TÝM" data-en="OUR TEAM">NÁŠ TÝM</span>
+                        </div>
+                        <h2 data-cs="Štafeta pod taktovkou našeho týmu" data-en="Relay Led by Our Team">Štafeta pod taktovkou našeho týmu</h2>
+                        <div class="team-photo-wrapper">
+                            <img src="assets/team-stafeta.jpg" alt="Enervit Team Štafeta" class="team-photo">
+                        </div>
+                        <p class="team-text" data-cs="Jako tým jsme si odšprintovali týmovou štafetu" data-en="As a team, we sprinted through the team relay">Jako tým jsme si odšprintovali týmovou štafetu</p>
+                    </div>
+                </section>
+
+                <!-- Slide 8: Galerie -->
+                <section class="slide">
+                    <div class="slide-content">
+                        <div class="section-badge">
+                            <span class="badge-num">07</span>
+                            <span data-cs="GALERIE" data-en="GALLERY">GALERIE</span>
+                        </div>
+                        <h2 data-cs="Momenty z terénu" data-en="Moments from the Field">Momenty z terénu</h2>
+                        <div class="gallery-mosaic">
+                            <div class="gallery-item large"><img src="assets/photo-12.jpg" alt=""></div>
+                            <div class="gallery-item"><img src="assets/photo-1.jpg" alt=""></div>
+                            <div class="gallery-item"><img src="assets/photo-6.jpg" alt=""></div>
+                            <div class="gallery-item"><img src="assets/photo-11.jpg" alt=""></div>
+                            <div class="gallery-item"><img src="assets/stafeta-tym.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 9: Reach -->
+                <section class="slide slide-red">
+                    <div class="slide-content center">
+                        <div class="section-badge light">
+                            <span class="badge-num">08</span>
+                            <span>REACH & IMPACT</span>
+                        </div>
+                        <div class="big-stat">
+                            <span class="big-num">9 821</span>
+                            <span class="big-label" data-cs="přímých kontaktů" data-en="direct contacts">přímých kontaktů</span>
+                        </div>
+                        <div class="reach-row">
+                            <div class="reach-item">
+                                <span class="reach-num">10 000+</span>
+                                <span class="reach-label" data-cs="diváků" data-en="spectators">diváků</span>
+                            </div>
+                            <div class="reach-item">
+                                <span class="reach-num">15</span>
+                                <span class="reach-label" data-cs="TV stanic" data-en="TV stations">TV stanic</span>
+                            </div>
+                            <div class="reach-item">
+                                <span class="reach-num">34</span>
+                                <span class="reach-label" data-cs="zemí" data-en="countries">zemí</span>
+                            </div>
+                            <div class="reach-item">
+                                <span class="reach-num">7</span>
+                                <span class="reach-label" data-cs="dní" data-en="days">dní</span>
+                            </div>
+                        </div>
+                        <div class="media-strip">
+                            <span>ČT Sport</span><span>Prima</span><span>Nova</span><span>Evropa 2</span><span>iDNES</span><span>iSport</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 10: ROI -->
+                <section class="slide">
+                    <div class="slide-content">
+                        <div class="section-badge">
+                            <span class="badge-num">09</span>
+                            <span data-cs="HODNOTA" data-en="VALUE">HODNOTA</span>
+                        </div>
+                        <h2 data-cs="Strategický přínos" data-en="Strategic Benefits">Strategický přínos</h2>
+                        <div class="roi-grid">
+                            <div class="roi-card">
+                                <div class="roi-icon">🎯</div>
+                                <h3>Brand Awareness</h3>
+                                <p data-cs="Dominantní vizibilita, TV přenosy, logo na číslech" data-en="Dominant visibility, TV broadcasts, logo on bibs">Dominantní vizibilita, TV přenosy, logo na číslech</p>
+                            </div>
+                            <div class="roi-card">
+                                <div class="roi-icon">🤝</div>
+                                <h3>Product Trial</h3>
+                                <p data-cs="9 821 přímých kontaktů, sampling, závodní balíčky" data-en="9,821 direct contacts, sampling, race packages">9 821 přímých kontaktů, sampling, závodní balíčky</p>
+                            </div>
+                            <div class="roi-card">
+                                <div class="roi-icon">❤️</div>
+                                <h3>Brand Love</h3>
+                                <p data-cs="Asociace s lovebrand eventem, Paralympijský tým" data-en="Association with lovebrand event, Paralympic team">Asociace s lovebrand eventem, Paralympijský tým</p>
+                            </div>
+                            <div class="roi-card">
+                                <div class="roi-icon">💼</div>
+                                <h3>B2B</h3>
+                                <p data-cs="450+ firemních týmů, VIP networking" data-en="450+ corporate teams, VIP networking">450+ firemních týmů, VIP networking</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Slide 11: Future -->
+                <section class="slide slide-future">
+                    <div class="slide-content center">
+                        <div class="future-hero">
+                            <span class="future-num">60.</span>
+                            <span class="future-label" data-cs="jubilejní ročník" data-en="jubilee edition">jubilejní ročník</span>
+                        </div>
+                        <div class="future-date">
+                            <span class="future-days">11.–14.</span>
+                            <span class="future-month" data-cs="ÚNORA 2027" data-en="FEBRUARY 2027">ÚNORA 2027</span>
+                        </div>
+                        <p class="future-text" data-cs="Těšíme se na další kapitolu spolupráce" data-en="We look forward to the next chapter">Těšíme se na další kapitolu spolupráce</p>
+                        <div class="future-logos">
+                            <img src="assets/enervit-logo.svg" alt="Enervit" class="future-logo-enervit">
+                            <span class="future-x">×</span>
+                            <img src="assets/jizerska50-logo.svg" alt="Jizerská 50" class="future-logo-jiz50">
+                        </div>
+                        <p class="skol">SKOL! 🎿</p>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Footer Navigation -->
+        <footer class="footer-nav">
+            <button class="nav-btn nav-btn-back" id="btn-prev" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                <span data-cs="Zpět" data-en="Back">Zpět</span>
+            </button>
+            <span class="slide-title" id="slide-title"></span>
+            <button class="nav-btn nav-btn-next" id="btn-next">
+                <span data-cs="Další" data-en="Next">Další</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </footer>
+
+        <!-- Keyboard Hint -->
+        <div class="keyboard-hint" data-cs="← → šipky pro navigaci" data-en="← → arrows to navigate">← → šipky pro navigaci</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
