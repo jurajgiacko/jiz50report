@@ -1286,7 +1286,7 @@ body.fullscreen:hover .fullscreen-btn {
 .paralympic-photo {
     width: 100%;
     height: auto;
-    max-height: 280px;
+    max-height: 380px;
     object-fit: contain;
     border-radius: 12px;
 }
@@ -1337,7 +1337,7 @@ body.fullscreen:hover .fullscreen-btn {
    TEAM SLIDE
    ======================================== */
 .team-photo-wrapper {
-    max-width: 450px;
+    max-width: 550px;
     margin: 0 auto 16px;
     border-radius: 16px;
     overflow: hidden;
@@ -1347,7 +1347,7 @@ body.fullscreen:hover .fullscreen-btn {
 .team-photo {
     width: 100%;
     height: auto;
-    max-height: 280px;
+    max-height: 380px;
     object-fit: contain;
     display: block;
 }
