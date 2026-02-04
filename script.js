@@ -16,7 +16,6 @@ let currentSlide = 0;
 let totalSlides = 0;
 let currentLang = CONFIG.defaultLang;
 let elements = {};
-let mobileHintDismissed = false;
 
 // ========================================
 // INITIALIZATION
@@ -92,59 +91,7 @@ function showMainContent() {
         });
         
         initPresentation();
-        checkMobileHint();
     }, 400);
-}
-
-// ========================================
-// MOBILE HINT
-// ========================================
-function checkMobileHint() {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const isPortrait = window.innerHeight > window.innerWidth;
-    const hintShown = sessionStorage.getItem('mobile_hint_shown');
-    
-    if (isMobile && isPortrait && !hintShown && !mobileHintDismissed) {
-        showMobileHint();
-    }
-}
-
-function showMobileHint() {
-    const hint = document.getElementById('mobile-hint');
-    const continueBtn = document.getElementById('hint-continue-btn');
-    const hintText = document.getElementById('hint-text');
-    
-    if (!hint) return;
-    
-    // Update text based on current language
-    if (hintText) {
-        hintText.textContent = hintText.dataset[currentLang] || hintText.dataset.cs;
-    }
-    if (continueBtn) {
-        const span = continueBtn.querySelector('span');
-        if (span) {
-            span.textContent = span.dataset[currentLang] || span.dataset.cs;
-        }
-    }
-    
-    hint.classList.add('show', 'force-show');
-    
-    continueBtn.addEventListener('click', () => {
-        hideMobileHint();
-        // Lock to landscape if supported
-        if (screen.orientation && screen.orientation.lock) {
-            screen.orientation.lock('landscape').catch(() => {});
-        }
-    });
-}
-
-function hideMobileHint() {
-    const hint = document.getElementById('mobile-hint');
-    if (hint) {
-        hint.classList.remove('show', 'force-show');
-        mobileHintDismissed = true;
-        sessionStorage.setItem('mobile_hint_shown', 'true');
-    }
 }
 
 // ========================================
